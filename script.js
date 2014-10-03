@@ -37,7 +37,7 @@ function calculateCarValue(form) {
 	// If the car is 5 or more years we want it
 	// More cheap stock is what we need!
 	if(carAge < 5){
-		window.alert("I would be happy to take this rust bucket car off your hands. It's too old if it's " + carAge + " years old.");
+		window.alert("I would be happy to take this rust bucket car off your hands. It's too new if it's " + carAge + " years old.");
 	}
 	else
 	{
@@ -50,7 +50,7 @@ function calculateCarValue(form) {
 function calculateCarPrice(purchasePrice, carAge){
 	
 	// I think this was meant to be at 10% not 1000%. We might make some money then.
-	var pruchaseRate = 1000;
+	var pruchaseRate = 0.1;
 	
 	var value = ((purchasePrice / 100) * pruchaseRate) * (1 / carAge);
 	return value;
