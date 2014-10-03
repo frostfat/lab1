@@ -2,6 +2,7 @@
 My big file of javascript
 */
 
+//adjusted file names, and added comma
 var carArray = new Array('car-blue.png','car-green.png','car-pink.png','car-red.png', 'car-yellow.png');
 
 function changeCar() {
@@ -17,6 +18,7 @@ function startTimer() {
 	// later I want to add some more automated stuff
 }
 
+//"sale fever" to 'sale fever' and changed quotes around it's
 var motdArray = new Array("It's a great day to sell cars!", "Welcome to Bodys Used Motors. The finest cars left!", "Today is 'SALE FEVER' day!!!", 'A name you can surely trust!');
 
 // The important message of the day (motd)
@@ -36,6 +38,7 @@ function calculateCarValue(form) {
 	
 	// If the car is 5 or more years we want it
 	// More cheap stock is what we need!
+	//fixed syntax error, making single = into ==
 	if(carAge == 5 || carAge > 5){
 		window.alert("I would be happy to take this rust bucket car off your hands.");
 		return;
@@ -47,18 +50,10 @@ function calculateCarValue(form) {
 function calculateCarPrice(purchasePrice, carAge){
 	
 	// I think this was meant to be at 10% not 1000%. We might make some money then.
+	//adjusted the 1000 to 10
 	var purchaseRate = 10;
 	
 	var value = purchasePrice -((purchasePrice / 100) * purchaseRate) * (1 / carAge);
-	return value;
-}
-
-function calculateCarPrice(purchasePrice, carAge){
-	
-	// I think this was meant to be at 10% not 1000%. We might make some money then.
-	var pruchaseRate =10;
-	
-	var value = purchasePrice - ((purchasePrice / 100) * pruchaseRate) * (1 / carAge);
 	return value;
 }
 
@@ -69,8 +64,10 @@ function calculateLoan(){
 	// I think this was in months?
 	var borrowTime = parseInt(document.getElementById("borrowTime").value);
 	//alert(borrowTime);
+	//changed values in index.html
 	
 	// We need at least 50% interest - i want a new hot tub
+	//changed interestRate format from 50 to 0.5
 	var interestRate = 0.5;
 	var monthlyInterestRate = interestRate / 12;
 	
