@@ -29,6 +29,7 @@ function calculateCarValue(form) {
 	
 	var purchasePrice = form.carPurchasePrice.value;
 	var carAge = form.carAge.value;
+	var value = 0;
 	
 	if(carAge <= 2) value = calculateCarPrice(purchasePrice, 2);
 	if(carAge == 3) value = calculateCarPrice(purchasePrice, 3);
@@ -47,9 +48,9 @@ function calculateCarValue(form) {
 function calculateCarPrice(purchasePrice, carAge){
 	
 	// I think this was meant to be at 10% not 1000%. We might make some money then.
-	var purchasePrice = 0.1;
+	var purchaseRate = 10;
 	
-	var value = ((purchasePrice / 100) * purchasePrice) * (1 / carAge);
+	var value = purchasePrice -((purchasePrice / 100) * purchaseRate) * (1 / carAge);
 	return value;
 }
 
@@ -59,6 +60,7 @@ function calculateLoan(){
 	
 	// I think this was in months?
 	var borrowTime = parseInt(document.getElementById("borrowTime").value);
+	alert(borrowTime);
 	
 	// We need at least 50% interest - i want a new hot tub
 	var interestRate = 50;
