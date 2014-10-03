@@ -60,10 +60,10 @@ function calculateLoan(){
 	
 	// I think this was in months?
 	var borrowTime = parseInt(document.getElementById("borrowTime").value);
-	alert(borrowTime);
+	//alert(borrowTime);
 	
 	// We need at least 50% interest - i want a new hot tub
-	var interestRate = 50;
+	var interestRate = 0.5;
 	var monthlyInterestRate = interestRate / 12;
 	
 	var totalMessage = "";
@@ -76,8 +76,7 @@ function calculateLoan(){
 	else {
 		// my special interest rate calculation
 		// passed down through my family
-		//var monthlyTotal = borrowValue * (monthlyInterestRate / (1 - (Math.pow((1 + monthlyInterestRate),(borrowTime * -1)))));
-		var monthlyTotal = (borrowValue + (borrowValue/ 100) * interestRate)/borrowTime;
+		var monthlyTotal = borrowValue * (monthlyInterestRate / (1 - (Math.pow((1 + monthlyInterestRate),(borrowTime * -1)))));
 		var monthlyTotalRounded = Math.round(monthlyTotal);
 		
 		var message = "We are happy to loan you &pound;" + numberWithCommas(borrowValue) + ". It will only cost <b>&pound;" + numberWithCommas(monthlyTotalRounded) + "</b> a month! That's a steal!";
