@@ -5,6 +5,7 @@ My big file of javascript
 var carArray = new Array('car-blue.png',"greencar.png",'pink.png','carred.png' "yella-car.png");
 
 function changeCar() {
+	alert();
 	var banger = carArray[Math.floor(Math.random() * carArray.length)];
 	//console.log(banger);
 	document.getElementById("car").src = "img/" + banger;
