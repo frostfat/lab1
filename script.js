@@ -36,15 +36,12 @@ function calculateCarValue(form) {
 	
 	// If the car is 5 or more years we want it
 	// More cheap stock is what we need!
-	if(carAge < 5){
-		window.alert("I would be happy to take this rust bucket car off your hands. It's too new if it's " + carAge + " years old.");
-	}
-	else
-	{
-		window.alert('We would be happy to offer you \u00a3' + Math.round(value) + " for your lovely car!");
+	if(carAge == 5 || carAge > 5){
+		window.alert("I would be happy to take this rust bucket car off your hands.");
+		return;
 	}
 	
-	return;
+	window.alert('We would be happy to offer you \u00a3' + Math.round(value) + " for your lovely car!");
 }
 
 function calculateCarPrice(purchasePrice, carAge){
